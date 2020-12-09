@@ -1,0 +1,14 @@
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+
+  &__slogan {
+    margin-top: 4px;
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+}

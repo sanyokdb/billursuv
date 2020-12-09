@@ -5,7 +5,8 @@
   "author": "sanyok",
   "license": "MIT",
   "dependencies": {
-    "jquery": "3.5.1"
+    "jquery": "3.5.1",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "browser-sync": "~2.26.13",
