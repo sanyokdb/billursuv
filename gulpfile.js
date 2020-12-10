@@ -153,5 +153,5 @@ gulp.task('watch', function () {
 // задача по умолчанию
 gulp.task('default', gulp.series(
     'build',
-    gulp.parallel('webserver','watch')      
+    gulp.parallel('webserver','watch')
 ));

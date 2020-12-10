@@ -1,6 +1,24 @@
 .header {
   padding: 1rem 0;
-  
+
+  &--topfixed {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    .menu__link {
+      color: rgba($white, 0.8);
+      &:hover {
+        color: rgba($white, 1);
+      }
+    }
+
+    .logo__slogan {
+      color: rgba($white, 0.8);
+    }
+
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;

@@ -1,40 +1,49 @@
 .intro {
   background-color: $primary;
-  height: 823px;
+  height: $intro-height;
+  // height: calc(100vh - 84px);
+  // min-height: 600px;
   position: relative;
+
+  &__item {
+    height: $intro-height;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+
 }
 
-.intro svg {
-  width: 100%;
-  // background: $primary;
+// SVG Waves
+svg.intro__waves {
   display: block;
   width: 100%;
-  height: 10vw;
+  height: 160px;
   position: absolute;
   bottom: 0;
+  use {
+    height: 50px;
+    animation: move 30s linear infinite;
+    &:nth-child(1) {
+      animation-delay: -2s;
+      fill: $primary;
+      opacity: .3;
+    }
+    &:nth-child(2) {
+      animation-delay: -2s;
+      animation-duration: 17s;
+      fill: $primary;
+      opacity: .2;
+    }
+    &:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 10s;
+      fill: #ffffff;
+      opacity: 1;
+    }
+  }
 }
-
-.intro svg>g>use {
-  animation: move 30s linear infinite;
-}
-
-.intro svg>g>use:nth-child(1) {
-  animation-delay: -2s;
-  fill: #7986cb;
-}
-
-.intro svg>g>use:nth-child(2) {
-  animation-delay: -2s;
-  animation-duration: 17s;
-  fill: #5c6bc0;
-}
-
-.intro svg>g>use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 10s;
-  fill: #ffffff;
-}
-
 @keyframes move {
   from {
     transform: translate(-90px, 0%);
