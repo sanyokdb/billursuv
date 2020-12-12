@@ -18,6 +18,15 @@
 
 @font-face {
   font-family: ProximaNova;
+  src: local("Proxima Nova Semibold"), local("ProximaNovaSemibold");
+  src: url(../fonts/ProximaNova-Semibold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Semibold.woff) format("woff"), url(../fonts/ProximaNova-Semibold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ProximaNova;
   src: local("Proxima Nova Bold"), local("ProximaNovaBold");
   src: url(../fonts/ProximaNova-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Bold.woff) format("woff"), url(../fonts/ProximaNova-Bold.woff2) format("woff2");
   font-weight: 700;

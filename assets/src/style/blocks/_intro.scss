@@ -4,7 +4,11 @@
   // height: calc(100vh - 84px);
   // min-height: 600px;
   position: relative;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
 
+.intro-slider {
   &__item {
     height: $intro-height;
     position: relative;
@@ -13,43 +17,66 @@
     background-size: cover;
   }
 
-}
-
-// SVG Waves
-svg.intro__waves {
-  display: block;
-  width: 100%;
-  height: 160px;
-  position: absolute;
-  bottom: 0;
-  use {
-    height: 50px;
-    animation: move 30s linear infinite;
-    &:nth-child(1) {
-      animation-delay: -2s;
-      fill: $primary;
-      opacity: .3;
-    }
-    &:nth-child(2) {
-      animation-delay: -2s;
-      animation-duration: 17s;
-      fill: $primary;
-      opacity: .2;
-    }
-    &:nth-child(3) {
-      animation-delay: -4s;
-      animation-duration: 10s;
+  &__btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 0;
+    outline: none !important;
+    background: none;
+    cursor: pointer;
+    svg {
+      width: 40px;
+      padding: 0;
       fill: #ffffff;
-      opacity: 1;
     }
   }
-}
-@keyframes move {
-  from {
-    transform: translate(-90px, 0%);
+  &__prev {
+    left: 20px;
+  }
+  &__next {
+    right: 20px;
   }
 
-  to {
-    transform: translate(90px, 0%);
+  &__dots {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 5px;
+      padding: 0;
+      button {
+        border: none;
+        display: block;
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        outline: none;
+        line-height: 0px;
+        font-size: 0px;
+        padding: 0;
+        color: transparent;
+        border-radius: 20px;
+        background-color: #ffffff;
+        transition: all .2s ease-in-out;
+        &:hover, &:focus {
+          outline: none;
+        }
+      }
+      &.slick-active button {
+        width: 25px;
+        background-color: $primary;
+      }
+    }
   }
+
 }

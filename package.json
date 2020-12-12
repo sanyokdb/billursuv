@@ -5,6 +5,7 @@
   "author": "sanyok",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "jquery": "3.5.1",
     "normalize.css": "^8.0.1",
     "slick-slider": "^1.8.2"

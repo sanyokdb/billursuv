@@ -23,14 +23,78 @@ body {
   font-weight: 400;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3.1rem;
+}
+h3 {
+  font-size: 2.85rem;
+}
+h4 {
+  font-size: 2.6rem;
+}
+h5 {
+  font-size: 2.35rem;
+}
+h6 {
+  font-size: 1.6rem;
+}
+
+a {
+  color: $primary;
+  &:hover {
+    text-decoration: none;
+  }
+}
 .container {
   max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+.title {
+  color: $primary;
+  font-size: 3.6rem;
+  font-weight: 800;
+  padding-bottom: 15px;
+  margin-bottom: 2.5rem;
+  background-image: url(/img/title-blue.png);
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.text-primary {
+  color: $primary;
+}
+.text-secondary {
+  color: $secondary;
+}
 @import "blocks/header";
 @import "blocks/logo";
 @import "blocks/menu";
 @import "blocks/intro";
 @import "blocks/waves";
+@import "blocks/post";
+@import "blocks/tiles";

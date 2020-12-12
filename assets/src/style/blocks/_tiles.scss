@@ -1,0 +1,13 @@
+.tiles {
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    flex: 0 0 50%;
+    width: 50%;
+    background-color: $primary;
+    height: 600px;
+  }
+}
