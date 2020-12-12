@@ -9,5 +9,30 @@
     width: 50%;
     background-color: $primary;
     height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    &--image {
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .3s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &--text {
+      padding: 7%;
+    }
+
   }
+
+
+
 }
