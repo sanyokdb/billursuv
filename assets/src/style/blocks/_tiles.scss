@@ -1,21 +1,25 @@
 .tiles {
+
   &__row {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin: 0 -15px;
 
     &:nth-child(odd) {
       flex-direction: row-reverse;
     }
-  }
 
-  &__item {
-    flex: 0 0 50%;
+  }
+  
+  &-item {
     width: 50%;
-    background-color: $primary;
-    height: 600px;
     position: relative;
     overflow: hidden;
-
+    background-color: $primary;
+    color: $white;
+    font-size: 2.4rem;
+    height: 520px;
     &--image {
       img {
         position: absolute;
@@ -30,13 +34,59 @@
         }
       }
     }
-
     &--text {
-      padding: 7%;
+      padding: 6%;
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 324px;
+        height: 152px;
+        background: transparent url(/img/water-1.png) 0 0 no-repeat;
+      }
     }
-
+    &__inner {
+      position: relative;
+    }
+    &__title {
+      color: $white;
+      background-image: url(/img/title-white.png);
+    }
+    ul {
+      margin-top: 3.6rem;
+      margin-bottom: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin: 0;
+        & + li {
+          margin-top: 2.6rem;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: $white;
+        transition: padding-left .3s ease-in-out;
+        line-height: 1.2;
+        &:hover {
+          padding-left: 10px;
+        }
+      }
+      i {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 10px;
+        flex-shrink: 0;
+        color: $primary;
+      }
+    }
   }
-
-
 
 }

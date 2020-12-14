@@ -1,0 +1,14 @@
+.calc {
+
+  border: 2px solid $primary;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 20px;
+  padding: 3rem 6%;
+
+  &__title {
+    text-align: center;
+    background-position: center bottom;
+  }
+
+}

@@ -17,8 +17,8 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   color: #333;
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: 1.7rem;
+  line-height: 1.35;
   font-family: 'ProximaNova', sans-serif;
   font-weight: 400;
 }
@@ -70,8 +70,9 @@ a {
 .title {
   color: $primary;
   font-size: 3.6rem;
+  line-height: 1;
   font-weight: 800;
-  padding-bottom: 15px;
+  padding-bottom: 2rem;
   margin-bottom: 2.5rem;
   background-image: url(/img/title-blue.png);
   background-position: 0 bottom;
@@ -91,6 +92,7 @@ a {
 .text-secondary {
   color: $secondary;
 }
+
 @import "blocks/header";
 @import "blocks/logo";
 @import "blocks/menu";
@@ -98,3 +100,8 @@ a {
 @import "blocks/waves";
 @import "blocks/post";
 @import "blocks/tiles";
+@import "blocks/calc";
+@import "blocks/reviews";
+@import "blocks/footer";
+
+@import "media";

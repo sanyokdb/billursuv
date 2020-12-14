@@ -1,0 +1,63 @@
+.reviews-slider {
+  margin: 0 -15px;
+  &__item{
+    padding: 4px 15px;
+  }
+  .review-thumb {
+    margin-bottom: 0;
+  }
+  a {
+    outline: none;
+  }
+}
+
+.reviews-arrows {
+  // margin-bottom: 15px;
+  button {
+    border: none;
+    padding: 0;
+    outline: none !important;
+    background: none;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 4rem;
+  }
+}
+
+.review-thumb {
+  padding: 2.5rem;
+  box-shadow: 0 0 5px rgba($primary, .3);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+
+  &__name {
+    color: $primary;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  &__text {
+    margin-top: 1rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: -80px;
+    width: 324px;
+    height: 152px;
+    background: transparent url(/img/water-1.png) 0 0 no-repeat;
+    transform: rotate(180deg) scale(-1, 1);
+    transition: all .4s linear;
+  }
+  &:hover {
+    &::before {
+      right: 0;
+      top: -40px;
+    }
+  }
+
+}

@@ -16,7 +16,7 @@
 }
 
 .post-arrows {
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   button {
     border: none;
     padding: 0;
@@ -24,11 +24,8 @@
     background: none;
     cursor: pointer;
     margin: 0 5px;
-    svg {
-      width: 30px;
-      padding: 0;
-      fill: #333;
-    }
+    font-size: 4rem;
+    line-height: 0;
   }
 }
 
