@@ -8,4 +8,21 @@
   background-color: $primary;
   position: relative;
   color: $white;
+  a {
+    color: rgba(255,255,255,.8);
+    &:hover {
+      color: rgba(255,255,255,1);
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 23%;
+    background-color: rgba(255,255,255,.2);
+  }
+
 }
