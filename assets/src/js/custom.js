@@ -1,10 +1,9 @@
 $(function () {
-
   // Intro Slider
   $(".intro-slider").slick({
     slidesToShow: 1,
     fade: true,
-    cssEase: 'linear',
+    cssEase: "linear",
     autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
@@ -16,46 +15,42 @@ $(function () {
   });
 
   $(".post-slider").slick({
-    lazyLoad: 'ondemand',
+    lazyLoad: "ondemand",
     infinite: true,
     slidesToShow: 3,
-    appendArrows:$(".post-arrows"),
-    prevArrow:
-      '<button class="post-arrows__prev"><i class="icon-long-arrow-left"></i></button>',
-    nextArrow:
-      '<button class="post-arrows__next"><i class="icon-long-arrow-right"></i></button>',
+    appendArrows: $(".post-arrows"),
+    prevArrow: '<button class="post-arrows__prev"><i class="icon-long-arrow-left"></i></button>',
+    nextArrow: '<button class="post-arrows__next"><i class="icon-long-arrow-right"></i></button>',
     responsive: [
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-        }
+        },
       },
-    ]
+    ],
   });
 
   $(".reviews-slider").slick({
     infinite: true,
     slidesToShow: 2,
-    appendArrows:$(".reviews-arrows"),
-    prevArrow:
-      '<button class="reviews-arrows__prev"><i class="icon-long-arrow-left"></i></button>',
-    nextArrow:
-      '<button class="reviews-arrows__next"><i class="icon-long-arrow-right"></i></button>',
+    appendArrows: $(".reviews-arrows"),
+    prevArrow: '<button class="reviews-arrows__prev"><i class="icon-long-arrow-left"></i></button>',
+    nextArrow: '<button class="reviews-arrows__next"><i class="icon-long-arrow-right"></i></button>',
     responsive: [
       {
         breakpoint: 767.98,
         settings: {
           slidesToShow: 1,
-        }
+        },
       },
-    ]
+    ],
   });
 
 });

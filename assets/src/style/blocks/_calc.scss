@@ -11,4 +11,60 @@
     background-position: center bottom;
   }
 
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex-grow: 1;
+  }
+
+  &__item-range {
+    width: 50%;
+    margin-right: 6%;
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+}
+
+.rangeslider {
+  margin-bottom: 4rem;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    color: lighten($primary, 30%);
+  }
+
+  &__range {
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    background-color: lighten($primary, 45%);
+    outline: 0;
+    border-radius: 50rem;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: lighten($primary, 45%);
+      border: 7px solid $primary;
+      cursor: pointer;
+    }
+
+  }
+
 }

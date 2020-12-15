@@ -1,11 +1,52 @@
 <div class="calc">
   <h3 class="calc__title title">Калькулятор водного баланса</h3>
   <div class="calc__items">
-    <div class="calc__item">
-      
+    <div class="calc__item calc__item-range">
+
+      <div class="rangeslider">
+        <div class="rangeslider__top">
+          <div class="rangeslider__value">0 лет</div>
+          <div class="rangeslider__title">Возраст</div>
+        </div>
+        <input class="rangeslider__range" type="range" value="36" min="0" max="100">
+      </div>
+
+      <div class="rangeslider">
+        <div class="rangeslider__top">
+          <div class="rangeslider__value">0 лет</div>
+          <div class="rangeslider__title">Возраст</div>
+        </div>
+        <input class="rangeslider__range" type="range" value="26" min="0" max="100">
+      </div>
+
+      <div class="rangeslider">
+        <div class="rangeslider__top">
+          <div class="rangeslider__value">0 лет</div>
+          <div class="rangeslider__title">Возраст</div>
+        </div>
+        <input class="rangeslider__range" type="range" value="16" min="0" max="100">
+      </div>
+
     </div>
     <div class="calc__item">
-      
+
+      <div class="form-group">
+        <label>Пол</label>
+        <select class="form-control">
+          <option>Мужской</option>
+          <option>Женский</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Активность</label>
+        <select class="form-control">
+          <option>Высокая</option>
+          <option>Низкая</option>
+          <option>Средняя</option>
+        </select>
+      </div>
+      <input class="btn btn-primary calc__submit" type="submit" value="Рассчитать">
+
     </div>
   </div>
 </div>
