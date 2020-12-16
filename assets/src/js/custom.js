@@ -54,6 +54,28 @@ $(function () {
   });
 
   // Калькулятор воды
+  function res_func() {
+    $now_act = $(".calc-gender li.active").attr("id");
+
+    if ($now_act == "calc-gender__man") {
+      $rate = 0.9;
+    } else {
+      $rate = 0.8;
+    }
+
+    $w = parseInt($(".calc-range__weight-num").text());
+    $t = parseInt($(".calc-range__train-num").text());
+
+    $fin = ($w * 0.03 + ($t * 60) / 100) * $rate;
+
+    $fin = $fin.toFixed(1);
+
+    $(".calc-result__num").text($fin);
+    $res_px = $fin * 45;
+    $res_px = 450 - $res_px;
+    $(".calc-bottle__bg").css("bottom", -$res_px);
+  }
+
   $(".calc-range__weight").slider({
     range: "max",
     min: 20,
@@ -62,6 +84,9 @@ $(function () {
     step: 1,
     slide: function (event, ui) {
       $(".calc-range__weight-num").text(ui.value);
+      $(function () {
+        res_func();
+      });
     },
   });
   $(".calc-range__weight-num").text($(".calc-range__weight").slider("value"));
@@ -74,6 +99,9 @@ $(function () {
     step: 0.5,
     slide: function (event, ui) {
       $(".calc-range__train-num").text(ui.value);
+      $(function () {
+        res_func();
+      });
     },
   });
   $(".calc-range__train-num").text($(".calc-range__train").slider("value"));
@@ -85,6 +113,13 @@ $(function () {
       $(this).removeClass("active");
     });
     $(this).addClass("active");
+    $(function () {
+      res_func();
+    });
+  });
+
+  $(function () {
+    res_func();
   });
 
 });
