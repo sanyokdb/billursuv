@@ -53,4 +53,38 @@ $(function () {
     ],
   });
 
+  // Калькулятор воды
+  $(".calc-range__weight").slider({
+    range: "max",
+    min: 20,
+    max: 140,
+    value: 75,
+    step: 1,
+    slide: function (event, ui) {
+      $(".calc-range__weight-num").text(ui.value);
+    },
+  });
+  $(".calc-range__weight-num").text($(".calc-range__weight").slider("value"));
+
+  $(".calc-range__train").slider({
+    range: "max",
+    min: 0,
+    max: 6,
+    value: 2,
+    step: 0.5,
+    slide: function (event, ui) {
+      $(".calc-range__train-num").text(ui.value);
+    },
+  });
+  $(".calc-range__train-num").text($(".calc-range__train").slider("value"));
+  
+  $(".calc-range__label-train").tooltip();
+
+  $(".calc-gender li").click(function () {
+    $(".calc-gender li").each(function () {
+      $(this).removeClass("active");
+    });
+    $(this).addClass("active");
+  });
+
 });

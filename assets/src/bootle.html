@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Калькулятор дневного потребления воды &raquo; Shoro Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" id="bootstrap-css" href="https://www.shoro.kg/wp-content/themes/shoro/css/bootstrap.min.css?ver=5.5.3" type="text/css" media="all" />
+    <link rel="stylesheet" id="shoro-style-css" href="https://www.shoro.kg/wp-content/themes/shoro/style.css?ver=1538716229" type="text/css" media="all" />
+    <link rel="stylesheet" id="jquery-ui-css" href="https://www.shoro.kg/wp-content/themes/shoro/css/jquery-ui.css?ver=5.5.3" type="text/css" media="all" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js" id="jquery-1.11.0.min-js"></script>
+    <script type="text/javascript" src="https://www.shoro.kg/wp-content/themes/shoro/js/bootstrap.min.js?ver=5.5.3" id="bootstrap.min-js"></script>
+    <script type="text/javascript" src="https://www.shoro.kg/wp-content/themes/shoro/js/jquery-ui.js?ver=5.5.3" id="jquery-ui-js"></script>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+
+              <div class="row calc_row">
+
+                <div class="col-md-5 hidden-xs">
+                  <div id="bottle_wrapper">
+                    <img src="https://www.shoro.kg/wp-content/themes/shoro/img/bottle_calc_fill.jpg" alt="mask" id="bottle_bg" />
+                    <img src="https://www.shoro.kg/wp-content/themes/shoro/img/bottle_calc_mask_num.png" alt="bottle" id="bottle_mask" />
+                  </div>
+                </div>
+
+                <div class="col-md-7">
+                  <div class="gender_wrapper">
+                    <ul id="gender" class="list-unstyled list-inline">
+                      <li class="active" id="man_g">Мужской</li>
+                      <li id="woman_g">Женский</li>
+                    </ul>
+                  </div>
+
+                  <div class="first_slider">
+                    <p class="label_slider">Ваш вес</p>
+
+                    <div class="slide_wrapper">
+                      <div id="weight_slider"></div>
+                      <div id="weight_res">
+                        <p id="weight"><span id="weight_num"></span><span> кг</span></p>
+                      </div>
+                    </div>
+
+                    <div class="slide_marker">
+                      <span class="min_num">20</span>
+                      <span class="center_num">80</span>
+                      <span class="max_num">140</span>
+                    </div>
+                  </div>
+
+                  <div class="second_slider">
+                    <p id="train_info" data-toggle="tooltip" data-placement="left" title="Активность во время работы, игр, выполнения домашней работы, поездок и занятий спортом" class="label_slider">
+                      Физическая активность<sup><span class="glyphicon glyphicon-info-sign"></span></sup>
+                    </p>
+                    <script>
+                      $("#train_info").tooltip();
+                    </script>
+
+                    <div class="slide_wrapper">
+                      <div id="train_slider"></div>
+                      <div id="train_res">
+                        <p id="train"><span id="train_num"></span><span> ч</span></p>
+                      </div>
+                    </div>
+
+                    <div class="slide_marker">
+                      <span class="min_num">0</span>
+                      <span class="center_num">3</span>
+                      <span class="max_num">6</span>
+                    </div>
+                  </div>
+
+                  <div id="you_norm_wrapper">
+                    <p class="norm_label">Ваша рекомендованная норма:</p>
+
+                    <div id="you_norm"><span id="norm_res"></span><span id="norm_res_small">литра воды в день</span></div>
+                  </div>
+
+                  <div class="calc_warn">
+                    <p>Данный расчет носит рекомендательный характер.</p>
+                    <p>Для того, чтобы получить более точную информацию необходимо обратиться к диетологу.</p>
+                    <p>Для расчета используются рекомендации различных стран и ВОЗ, учитываются дополнительные параметры.</p>
+                  </div>
+                </div>
+              </div>
+
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        function res_func() {
+          $now_act = $("#gender li.active").attr("id");
+
+          if ($now_act == "man_g") {
+            $rate = 0.9;
+          } else {
+            $rate = 0.8;
+          }
+
+          $w = parseInt($("#weight_num").text());
+          $t = parseInt($("#train_num").text());
+
+          $fin = ($w * 0.03 + ($t * 60) / 100) * $rate;
+
+          $fin = $fin.toFixed(1);
+
+          $("#norm_res").text($fin);
+          $res_px = $fin * 45;
+          $res_px = 450 - $res_px;
+          $("#bottle_bg").css("bottom", -$res_px);
+        }
+
+        $(function () {
+          //            WEIGHT SLIDER
+          $("#weight_slider").slider({
+            range: "max",
+            min: 20,
+            max: 140,
+            value: 75,
+            step: 1,
+            slide: function (event, ui) {
+              $("#weight_num").text(ui.value);
+
+              $(function () {
+                res_func();
+              });
+            },
+          });
+          $("#weight_num").text($("#weight_slider").slider("value"));
+
+          //            TRAIN SLIDER
+          $("#train_slider").slider({
+            range: "max",
+            min: 0,
+            max: 6,
+            value: 2,
+            step: 0.5,
+            slide: function (event, ui) {
+              $("#train_num").text(ui.value);
+
+              $(function () {
+                res_func();
+              });
+            },
+          });
+          $("#train_num").text($("#train_slider").slider("value"));
+        });
+
+        $("#gender  li").click(function () {
+          $("#gender li").each(function () {
+            $(this).removeClass("active");
+          });
+
+          $(this).addClass("active");
+
+          $(function () {
+            res_func();
+          });
+        });
+
+        $(function () {
+          res_func();
+        });
+      });
+    </script>
+
+    
+    <a class="hidden-xs hidden-sm" href="/order/" id="zakaz">Заказать воду</a>
+
+  </body>
+</html>

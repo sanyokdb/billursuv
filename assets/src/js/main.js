@@ -1,6 +1,9 @@
 // Импортируем jQuery
 //= ../../../node_modules/jquery/dist/jquery.js
 
+// Импортируем jquery UI
+//= jquery-ui.js
+
 // Импортируем Slik-Slider
 //= ../../../node_modules/slick-slider/slick/slick.min.js
 

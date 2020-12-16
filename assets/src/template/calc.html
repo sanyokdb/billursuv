@@ -1,52 +1,54 @@
 <div class="calc">
-  <h3 class="calc__title title">Калькулятор водного баланса</h3>
+  <h3 class="calc__title title">Калькулятор дневного потребления воды</h3>
+
   <div class="calc__items">
-    <div class="calc__item calc__item-range">
 
-      <div class="rangeslider">
-        <div class="rangeslider__top">
-          <div class="rangeslider__value">0 лет</div>
-          <div class="rangeslider__title">Возраст</div>
+    <div class="calc__item calc__item-calc">
+      <div class="calc-gender">
+        <ul class="calc-gender__list">
+          <li class="calc-gender__man">Мужской</li>
+          <li class="calc-gender__woman">Женский</li>
+        </ul>
+      </div>    
+      <div class="calc-range">
+        <div class="calc-range__header">
+          <div class="calc-range__label">Ваш вес</div>
+          <div class="calc-range__value"><span class="calc-range__num calc-range__weight-num">0</span> кг</div>
         </div>
-        <input class="rangeslider__range" type="range" value="36" min="0" max="100">
-      </div>
-
-      <div class="rangeslider">
-        <div class="rangeslider__top">
-          <div class="rangeslider__value">0 лет</div>
-          <div class="rangeslider__title">Возраст</div>
+        <div class="calc-range__weight"></div>
+        <div class="calc-range__marker">
+          <span>20</span>
+          <span>80</span>
+          <span>140</span>
         </div>
-        <input class="rangeslider__range" type="range" value="26" min="0" max="100">
-      </div>
-
-      <div class="rangeslider">
-        <div class="rangeslider__top">
-          <div class="rangeslider__value">0 лет</div>
-          <div class="rangeslider__title">Возраст</div>
+      </div>    
+      <div class="calc-range">
+        <div class="calc-range__header">
+          <div class="calc-range__label calc-range__label-train" title="Активность во время работы, игр, выполнения домашней работы, поездок и занятий спортом">Физическая активность <i class="icon-info-circle"></i></div>
+          <div class="calc-range__value"><span class="calc-range__num calc-range__train-num">0</span> ч</div>
         </div>
-        <input class="rangeslider__range" type="range" value="16" min="0" max="100">
+        <div class="calc-range__train"></div>
+        <div class="calc-range__marker">
+          <span>0</span>
+          <span>3</span>
+          <span>6</span>
+        </div>
+      </div>    
+      <div class="calc-result">
+        <div class="calc-result__label">Ваша рекомендованная норма:</div>
+        <div class="calc-result__inner">
+          <span class="calc-result__num">2.6</span>
+          <span class="calc-result__text">л. воды в день</span>
+        </div>
       </div>
-
     </div>
-    <div class="calc__item">
 
-      <div class="form-group">
-        <label>Пол</label>
-        <select class="form-control">
-          <option>Мужской</option>
-          <option>Женский</option>
-        </select>
+    <div class="calc__item calc__item-bottle">
+      <div class="calc-bottle">
+        <img class="calc-bottle__bg" src="/img/calc-bottle__bg.jpg" alt="mask" />
+        <img class="calc-bottle__mask" src="/img/calc-bottle__mask.png" alt="bottle" />
       </div>
-      <div class="form-group">
-        <label>Активность</label>
-        <select class="form-control">
-          <option>Высокая</option>
-          <option>Низкая</option>
-          <option>Средняя</option>
-        </select>
-      </div>
-      <input class="btn btn-primary calc__submit" type="submit" value="Рассчитать">
-
     </div>
   </div>
+
 </div>
