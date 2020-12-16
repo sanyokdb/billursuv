@@ -93,12 +93,13 @@
       justify-content: space-between;
       font-size: 1.4rem;
       margin-top: 8px;
+      color: #777;
     }
 
     &__label-train {
       cursor: pointer;
       i {
-        color: lighten($primary, 30%);
+        color: #777;
         font-size: 1.3rem;
       }
     }
@@ -117,8 +118,16 @@
         cursor: pointer;
         width: 1.4em;
         height: 1.4em;
+        outline: 0;
       }
     }
+  }
+
+  &-warn {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    padding: 0 6px;
+    color: #777;
   }
 
   &-result {
@@ -126,6 +135,7 @@
       font-weight: 600;
       margin-bottom: .75rem;
       color: $primary;
+      padding-left: 6px;
     }
     &__inner {
       display: flex;
