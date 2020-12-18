@@ -1,8 +1,8 @@
 .intro {
   background-color: $primary;
-  height: $intro-height;
-  // height: calc(100vh - 84px);
-  // min-height: 600px;
+  // height: $intro-height;
+  height: 90vh;
+  min-height: 500px;
   position: relative;
   margin-bottom: 4rem;
   overflow: hidden;
@@ -10,7 +10,9 @@
 
 .intro-slider {
   &__item {
-    height: $intro-height;
+    // height: $intro-height;
+    height: 90vh;
+    min-height: 500px;
     position: relative;
     background-repeat: no-repeat;
     background-position: center bottom;

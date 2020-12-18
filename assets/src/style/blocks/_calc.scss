@@ -14,7 +14,8 @@
   &__items {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   &__item-calc {
     flex-grow: 1;
@@ -34,7 +35,6 @@
       right: 14px;
       bottom: 0;
       transition: all ease 0.4s;
-      display: none;
     }
     &__mask {
       position: absolute;
@@ -93,13 +93,13 @@
       justify-content: space-between;
       font-size: 1.4rem;
       margin-top: 8px;
-      color: #777;
+      color: #666;
     }
 
     &__label-train {
       cursor: pointer;
       i {
-        color: #777;
+        color: #666;
         font-size: 1.3rem;
       }
     }
@@ -127,7 +127,7 @@
     margin-top: 2rem;
     font-size: 1.4rem;
     padding: 0 6px;
-    color: #777;
+    color: #666;
   }
 
   &-result {
@@ -139,22 +139,24 @@
     }
     &__inner {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       align-items: center;
       background-color: lighten($primary, 58%);
       border-radius: 6px;
-      padding: 4px 20px;
+      padding: 10px 20px;
     }
     &__num {
       font-size: 4.8rem;
+      line-height: 1;
       font-weight: 700;
       color: $primary;
     }
     &__text {
       color: $primary;
+      line-height: 1;
       font-weight: 700;
       font-size: 2.4rem;
-      margin-left: 10px;
+      margin-left: 5px;
     }
   }
 

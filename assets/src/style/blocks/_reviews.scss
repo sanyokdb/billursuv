@@ -36,10 +36,12 @@
     color: $primary;
     font-weight: 700;
     font-size: 1.8rem;
+    position: relative;
   }
 
   &__text {
     margin-top: 1rem;
+    position: relative;
   }
 
   &::before {

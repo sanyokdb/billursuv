@@ -4,6 +4,12 @@
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
 
+  .menu {
+    &__list {
+      display: none;
+    }
+  }
+
   .title {
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -49,8 +55,20 @@
           width: 30px;
           height: 30px;
         }
+        a:hover {
+          padding-left: 0;
+        }
       }
 
+    }
+  }
+
+  .calc {
+    padding: 2rem;
+    &__item {
+      &-calc {
+        margin-right: 2rem;
+      }
     }
   }
 
@@ -62,13 +80,51 @@
   }
 }
 
+@media (max-width: 619.98px) {
+  .calc {
+    &__item {
+      &-calc {
+        margin-right: 0rem;
+      }
+    }
+    &-bottle {
+      display: none;
+    }
+  }
+}
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+
+  .ui-tooltip {
+    font-size: 1.4rem;
+  }
+  .calc {
+    padding: 1.5rem;
+    font-size: inherit;
+    &-bottle {
+      display: none;
+    }
+  }
+
   .footer-top {
     &__row {
       flex-direction: column;
       align-items: center;
+    }
+  }
+}
+
+
+@media (max-width: 399.98px) {
+  .calc {
+    &-result {
+      &__label {
+        font-size: 1.6rem;
+      }
+      &__text {
+        font-size: 2rem;
+      }
     }
   }
 }
