@@ -9,9 +9,7 @@
   }
 
   &__item {
-    + .menu__item {
-      margin-left: 2rem;
-    }
+    margin-left: 2rem;
   }
   &__link {
     display: block;
@@ -26,6 +24,10 @@
     &:hover {
       color: $red;
     }
+  }
+
+  &__btn {
+    display: none;
   }
 
 }

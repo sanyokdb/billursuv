@@ -4,7 +4,8 @@
   align-items: flex-start;
   text-decoration: none;
   color: inherit;
-
+  position: relative;
+  z-index: 1;
   &__slogan {
     margin-top: 4px;
     font-size: 1.3rem;

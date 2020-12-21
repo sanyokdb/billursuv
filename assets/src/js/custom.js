@@ -1,4 +1,11 @@
 $(function () {
+
+  $(".menu__btn").click(function () {
+    $(this).toggleClass("active");
+    $(".menu__list").toggleClass("active");
+    $("body").toggleClass("body__lock");
+  });
+
   // Intro Slider
   $(".intro-slider").slick({
     slidesToShow: 1,
