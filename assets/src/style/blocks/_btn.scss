@@ -19,9 +19,26 @@
   &-primary {
     color: #fff;
     background-color: $primary;
+    box-shadow: 0px 7px 13px rgba($primary,0.4);
     &:hover {
       color: #fff;
-      background-color: $secondary;
+    }
+  }
+
+  &-red {
+    color: #fff;
+    background-color: $red;
+    box-shadow: 0px 7px 13px rgba($red,0.4);
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &-outline {
+    &-primary {
+      padding: 1rem 1.8rem;
+      border: 2px solid $primary;
+      color: $primary
     }
   }
 

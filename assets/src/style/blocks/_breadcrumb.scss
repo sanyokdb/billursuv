@@ -1,0 +1,28 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  &-item {
+    display: flex;
+    + .breadcrumb-item {
+      padding-left: .5rem;
+      &::before {
+        display: inline-block;
+        padding-right: .5rem;
+        color: rgba(255, 255, 255, .6);
+        content: "/";
+      }
+    }
+    a {
+      color: rgba(255, 255, 255, .6);
+      &:hover {
+        color: rgba(255, 255, 255, .8);
+      }
+    }
+    &.active {
+      color: rgba(255, 255, 255, .6);
+    }
+  }
+
+}

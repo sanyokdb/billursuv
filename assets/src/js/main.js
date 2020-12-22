@@ -7,5 +7,11 @@
 // Импортируем Slik-Slider
 //= ../../../node_modules/slick-slider/slick/slick.min.js
 
+// Импортируем Waves
+//= ../../../node_modules/node-waves/dist/waves.min.js
+
+// Импортируем Fancyapp
+//= ../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js
+
 // Импортируем другие js-файлы
 //= custom.js

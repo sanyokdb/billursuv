@@ -60,6 +60,10 @@ $(function () {
     ],
   });
 
+  //  Waves.attach('.button');
+  Waves.init();
+  Waves.attach('.btn, .ripple');
+
   // Калькулятор воды
   function res_func() {
     $now_act = $(".calc-gender li.active").attr("id");
