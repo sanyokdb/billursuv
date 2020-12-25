@@ -24,6 +24,21 @@
   }
 }
 
+.review__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.review__col {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .review-thumb {
   padding: 2.5rem;
   box-shadow: 0 0 5px rgba($primary, .3);
@@ -62,4 +77,9 @@
     }
   }
 
+}
+
+.reviews__more {
+  text-align: center;
+  margin-top: 3rem;
 }

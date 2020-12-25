@@ -6,10 +6,12 @@
   "license": "MIT",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.5.3",
     "jquery": "3.5.1",
     "node-waves": "^0.7.6",
-    "slick-slider": "^1.8.2"
+    "slick-slider": "^1.8.2",
+    "wowjs-person": "^1.1.3"
   },
   "devDependencies": {
     "browser-sync": "~2.26.13",

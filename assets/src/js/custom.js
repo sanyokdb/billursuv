@@ -1,5 +1,8 @@
 $(function () {
 
+  // Wow
+  new WOW().init();
+  
   $(".menu__btn").click(function () {
     $(this).toggleClass("active");
     $(".menu__list").toggleClass("active");
@@ -60,10 +63,6 @@ $(function () {
     ],
   });
 
-  //  Waves.attach('.button');
-  Waves.init();
-  Waves.attach('.btn, .ripple');
-
   // Калькулятор воды
   function res_func() {
     $now_act = $(".calc-gender li.active").attr("id");
@@ -116,7 +115,7 @@ $(function () {
     },
   });
   $(".calc-range__train-num").text($(".calc-range__train").slider("value"));
-  
+
   $(".calc-range__label-train").tooltip();
 
   $(".calc-gender li").click(function () {
@@ -132,5 +131,9 @@ $(function () {
   $(function () {
     res_func();
   });
+
+  //  Waves.attach('.button');
+  Waves.init();
+  Waves.attach(".btn, .ripple");
 
 });

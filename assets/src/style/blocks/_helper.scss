@@ -1,3 +1,64 @@
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.phone-box {
+  display: flex;
+  >i {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    flex-shrink: 0;
+    font-size: 2rem;
+  }
+  a {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+.adres-box {
+  display: flex;
+  >i {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    flex-shrink: 0;
+    font-size: 2rem;
+  }
+}
+.social-box {
+  display: flex;
+  a {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 2rem;
+    + a {
+      margin-left: 1rem;
+    }
+  }
+}
+
 .left {
   float: left;
 }

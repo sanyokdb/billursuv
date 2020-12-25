@@ -76,7 +76,15 @@ gulp.task('css:build', function () {
         .pipe(autoprefixer()) // добавим префиксы
         .pipe(gulp.dest(path.build.css))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(cleanCSS()) // минимизируем CSS
+        .pipe(cleanCSS(
+            {
+                level: {
+                    1: {
+                        specialComments: '0'
+                    }
+                }
+            }
+        )) // минимизируем CSS
         .pipe(sourcemaps.write('./')) // записываем sourcemap
         .pipe(gulp.dest(path.build.css)) // выгружаем в build
         .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
