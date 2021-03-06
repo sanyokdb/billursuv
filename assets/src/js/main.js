@@ -4,17 +4,17 @@
 // Импортируем jquery UI
 //= jquery-ui.js
 
-// Импортируем Slik-Slider
-//= ../../../node_modules/slick-slider/slick/slick.min.js
+// Импортируем AOS-person
+//= ../../../node_modules/aos/dist/aos.js
+
+// Импортируем SwiperJS
+//= ../../../node_modules/swiper/swiper-bundle.min.js
 
 // Импортируем Waves
 //= ../../../node_modules/node-waves/dist/waves.min.js
 
 // Импортируем Fancyapp
 //= ../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js
-
-// Импортируем wowjs-person
-//= ../../../node_modules/wowjs-person/dist/wow.js
 
 // Импортируем другие js-файлы
 //= custom.js

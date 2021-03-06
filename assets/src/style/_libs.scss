@@ -4,8 +4,11 @@
 // Подключение Jquery UI
 @import "blocks/jquery-ui";
 
-// Подключение Slick-Slider
-@import "../../../node_modules/slick-slider/slick/slick.css";
+// Подключение animate.css
+@import "../../../node_modules/aos/dist/aos.css";
+
+// Подключение SwiperJS
+@import "../../../node_modules/swiper/swiper-bundle.min.css";
 
 // Подключение Waves
 @import "../../../node_modules/node-waves/dist/waves.min.css";
@@ -13,8 +16,6 @@
 // Подключение Fancyapp
 @import "../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";
 
-// Подключение animate.css
-@import "../../../node_modules/animate.css/animate.css";
 
 // Подключение IconMoon
 @import "blocks/icomoon";

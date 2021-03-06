@@ -1,69 +1,42 @@
 $(function () {
 
-  // Wow
-  new WOW().init();
+  // AOS
+  AOS.init();
   
   $(".menu__btn").click(function () {
     $(this).toggleClass("active");
-    $(".menu__list").toggleClass("active");
+    $(".menu-mobile").toggleClass("active");
     $("body").toggleClass("body__lock");
   });
 
-  // Intro Slider
-  $(".intro-slider").slick({
-    slidesToShow: 1,
-    fade: true,
-    cssEase: "linear",
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true,
-    dotsClass: "intro-slider__dots",
-    prevArrow:
-      '<button class="intro-slider__btn intro-slider__prev"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M136.97 380.485l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113l83.928-83.444c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0l-116.485 116c-4.686 4.686-4.686 12.284 0 16.971l116.485 116c4.686 4.686 12.284 4.686 16.97-.001z" class=""></path></svg></button>',
-    nextArrow:
-      '<button class="intro-slider__btn intro-slider__next"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M311.03 131.515l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L387.887 239H12c-6.627 0-12 5.373-12 12v10c0 6.627 5.373 12 12 12h375.887l-83.928 83.444c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l116.485-116c4.686-4.686 4.686-12.284 0-16.971L328 131.515c-4.686-4.687-12.284-4.687-16.97 0z" class=""></path></svg></button>',
+  // intro-slider
+  var swiper = new Swiper('.intro__slider', {
+    slidesPerView: 1,
+    loop: true,
+    effect: 'fade',
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
-  $(".post-slider").slick({
-    lazyLoad: "ondemand",
-    infinite: true,
-    slidesToShow: 3,
-    appendArrows: $(".post-arrows"),
-    prevArrow: '<button class="post-arrows__prev"><i class="icon-long-arrow-left"></i></button>',
-    nextArrow: '<button class="post-arrows__next"><i class="icon-long-arrow-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  // post-slider
+  var swiper = new Swiper('.post-slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
-  $(".reviews-slider").slick({
-    infinite: true,
-    slidesToShow: 2,
-    appendArrows: $(".reviews-arrows"),
-    prevArrow: '<button class="reviews-arrows__prev"><i class="icon-long-arrow-left"></i></button>',
-    nextArrow: '<button class="reviews-arrows__next"><i class="icon-long-arrow-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 767.98,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-
-  // Калькулятор воды
+  // Calc water
   function res_func() {
     $now_act = $(".calc-gender li.active").attr("id");
 
