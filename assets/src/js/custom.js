@@ -19,6 +19,11 @@ $(function () {
       delay: 2500,
       disableOnInteraction: false,
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: 'true'
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -27,13 +32,42 @@ $(function () {
 
   // post-slider
   var swiper = new Swiper('.post-slider', {
-    slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+    }
+  });
+
+  // reviews-slider
+  var swiper = new Swiper('.reviews-slider', {
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 1,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+    }
   });
 
   // Calc water

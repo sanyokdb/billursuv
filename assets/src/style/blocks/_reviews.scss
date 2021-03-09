@@ -1,10 +1,11 @@
 .reviews-slider {
-  margin: 0 -15px;
+  // margin: 0 -15px;
   &__item{
-    padding: 4px 15px;
+    // padding: 4px 15px;
   }
   .review-thumb {
-    margin-bottom: 0;
+    margin: 2px;
+    padding: 2.5rem 4rem;
   }
   a {
     outline: none;
